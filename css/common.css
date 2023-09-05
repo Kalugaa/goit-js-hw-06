@@ -26,4 +26,8 @@ button {
 }
 
 .gallery {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
 }
