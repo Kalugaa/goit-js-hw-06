@@ -34,6 +34,7 @@ function handleSubmit(event) {
 
   if (password.value === "" || email.value === "") {
     alert("Всі поля мають бути заповнені");
+    return;
   }
 
   const userData = {
@@ -41,6 +42,6 @@ function handleSubmit(event) {
     password: password.value,
   };
 
-  console.log(userData);
   form.reset();
+  console.log(userData);
 }

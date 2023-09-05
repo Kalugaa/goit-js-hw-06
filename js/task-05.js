@@ -13,7 +13,7 @@ input.addEventListener("input", handleInput);
 
 function handleInput(event) {
   if (event.currentTarget.value !== "") {
-    output.textContent = event.currentTarget.value;
+    output.textContent = event.currentTarget.value.trim();
   } else {
     output.textContent = "Anonymous";
   }

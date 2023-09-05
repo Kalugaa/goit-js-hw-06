@@ -17,10 +17,14 @@ const input = document.querySelector("#validation-input");
 input.addEventListener("blur", isValid);
 
 function isValid(event) {
-  if (event.currentTarget.value.length < input.getAttribute("data-length")) {
-    input.classList.add("invalid");
-  } else {
+  event.currentTarget.value = event.currentTarget.value.trim();
+
+  const inputLength = event.currentTarget.value.length.toString();
+  if (inputLength === input.getAttribute("data-length")) {
     input.classList.remove("invalid");
     input.classList.add("valid");
+  } else {
+    input.classList.remove("valid");
+    input.classList.add("invalid");
   }
 }
