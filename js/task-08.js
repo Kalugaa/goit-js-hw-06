@@ -42,6 +42,6 @@ function handleSubmit(event) {
     password: password.value,
   };
 
-  form.reset();
   console.log(userData);
+  form.reset();
 }
